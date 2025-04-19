@@ -1,14 +1,12 @@
-import { View, Text, Image, ScrollView, SafeAreaView, useWindowDimensions, ImageBackground } from "react-native"
+import { Image, ScrollView, SafeAreaView } from "react-native"
 
 import { StatusBar } from "expo-status-bar"
 
-import ButtonPri from "./components/ButtonPri"
-import ButtonSec from "./components/ButtonSec"
+import SectionOne from "./components/SectOne"
+import SectTwo from "./components/SectTwo"
+import Footer from "./components/Footer"
 
 export default function App() {
-
-  const { width } = useWindowDimensions()
-  const imageSize = width > 768 ? width / 4 - 20 : width - 32
 
   return (
     <SafeAreaView className="flex-1 bg-white">
@@ -19,124 +17,12 @@ export default function App() {
           source={require("@/assets/images/logo.svg")}
           className="w-20 h-32 mx-auto mt-16 md:mt-10 md:my-20 hover:animate-bounce"
         />
-        {/* Main Content */}
-        {/* Profile Images */}
-        {/* Desktop */}
-        <View className="hidden lg:block">
-          {/* Left */}
-          <View className="absolute w-fit -left-10 overflow-hidden top-3/4">
-            <View className="relative">
-              <Image
-                source={require("@/assets/images/desktop/image-hero-left.png")}
-                className="hover:animate-pulse"
-              />
-            </View>
-          </View>
-          {/* Right */}
-          <View className="absolute w-fit -right-10 overflow-hidden top-3/4">
-            <View className="relative">
-              <Image
-                source={require("@/assets/images/desktop/image-hero-right.png")}
-                className="hover:animate-pulse"
-              />
-            </View>
-          </View>
-        </View>
-        {/* Mobile */}
-        <View className="flex justify-center items-center lg:hidden ">
-          <View className="left-0 md:-left-3 overflow-hidden ">
-            <Image
-              source={require("@/assets/images/tablet/image-hero.png")}
-              className=" sm:scale-[50%] md:scale-[100%]"
-            />
-          </View>
-        </View>
-        {/* Center Content */}
-        <View className=" flex-col items-center mx-auto font-RedHat mt-10 lg:mt-0 mb-20">
-          <Text className="text-3xl md:text-4xl lg:text-6xl font-RedHat font-bold text-c_stale_d mb-4 text-center">
-            Group Chat
-          </Text>
-          <Text className="text-3xl md:text-4xl lg:text-6xl font-RedHat font-bold text-c_stale_d mb-4 text-center">for Everyone</Text>
-          <Text className="text-gray-500 mb-10 max-w-md mx-auto font-RedHat text-center w-[90%]">
-            Meet makes it easy to connect with others strong face-to-face virtually and collaborate across any device.
-          </Text>
-          <View className="flex-col md:flex-row gap-4 items-center">
-            <ButtonPri textPrim="Download" textSec="v1.3" />
-            <ButtonSec textPrim="What is it?" />
-          </View>
-        </View>
-        {/* Section Indicator */}
-        <View className="relative items-center  mb-20">
-          <View className="h-28 w-px bg-gray-300" />
-          <View className="absolute bottom-0  w-10 h-10 rounded-full border border-gray-300 items-center justify-center bg-white">
-            <Text className="text-gray-400 text-sm font-medium">01</Text>
-          </View>
-        </View>
-        {/* ----------------------------------- */}
+        {/* Section One */}
+        <SectionOne />
         {/* Section Two */}
-        <View>
-          {/* Image Grid */}
-          <View className="sm: w-[311px] md:w-[680px] lg:w-full mx-auto md:mx-10 flex flex-wrap md:flex-nowrap flex-row justify-center mb-12 gap-4 ">
-            <View className="sm:w-[147px] md:w-[152px] lg:w-[255px] aspect-square rounded-lg overflow-hidden flex items-center justify-center">
-              <Image
-                source={require("@/assets/images/desktop/image-woman-in-videocall.jpg")}
-                className="aspect-square transition-transform duration-300 sm:scale-[28%] md:scale-[35%] lg:scale-[53%] opacity-80 hover:cursor-pointer hover:opacity-[100%]"
-              />
-            </View>
-            <View className="sm:w-[147px] md:w-[152px] lg:w-[255px] aspect-square rounded-lg overflow-hidden flex items-center justify-center">
-              <Image
-                source={require("@/assets/images/desktop/image-women-videochatting.jpg")}
-                className="aspect-square transition-transform duration-300 sm:scale-[28%] md:scale-[35%] lg:scale-[53%] opacity-80 hover:cursor-pointer hover:opacity-[100%]"
-              />
-            </View>
-            <View className="sm:w-[147px] md:w-[152px] lg:w-[255px] aspect-square rounded-lg overflow-hidden flex items-center justify-center">
-              <Image
-                source={require("@/assets/images/desktop/image-men-in-meeting.jpg")}
-                className="aspect-square transition-transform duration-300 sm:scale-[28%] md:scale-[35%] lg:scale-[53%] opacity-80 hover:cursor-pointer hover:opacity-[100%]"
-              />
-            </View>
-            <View className="sm:w-[147px] md:w-[152px] lg:w-[255px] aspect-square rounded-lg overflow-hidden flex items-center justify-center">
-              <Image
-                source={require("@/assets/images/desktop/image-man-texting.jpg")}
-                className="aspect-square transition-transform duration-300 sm:scale-[28%] md:scale-[35%] lg:scale-[53%] opacity-80 hover:cursor-pointer hover:opacity-[100%]"
-              />
-            </View>
-          </View>
-          {/* Content Section */}
-          <View className="items-center px-4 ">
-            <Text className="text-c_cyan_d font-RedHat font-bold text-sm tracking-widest mb-4">BUILT FOR MODERN USE</Text>
-            <Text className="text-3xl md:text-4xl font-RedHat font-bold text-c_stale_d mb-6 text-center md:w-[70%] lg:w-[33%]">
-              Smarter meetings, all in one place
-            </Text>
-            <Text className="text-c_stale_n font-RedHat text-sm mb-16 text-center leading-6 md:w-[78%] lg:w-[38%]">
-              Send messages, share files, show your screen, and record your meetings — all in one workspace. Control who can join with invite-only team access, data encryption, and data export.
-            </Text>
-
-            {/* Section Indicator vertical line*/}
-            <View className="items-center">
-              <View className="h-24 w-px bg-slate-200" />
-            </View>
-          </View>
-        </View>
+        <SectTwo />
         {/* Footer */}
-        <ImageBackground
-          source={require("@/assets/images/desktop/image-footer.jpg")}>
-          {/* Section indicator number : 02 */}
-          <View className="h-12 w-12 rounded-full border border-slate-200 items-center justify-center bg-white absolute -top-6 left-1/2 -translate-x-1/2 z-10">
-            <Text className="text-slate-500 font-medium">02</Text>
-          </View>
-          <View className='w-full h-[312px] flex-1 space-y-8 md:flex-col lg:flex-row justify-center items-center p-20 bg-c_cyan_d bg-blend-multiply opacity-90'>
-            <View className='flex-1 flex-row justify-center items-center '>
-              <Text className=' text-white text-4xl font-bold font-RedHat lg:w-[80%]'>Experience more together</Text>
-            </View>
-            <View className='flex-1 justify-center items-center'>
-              <Text className='text-white text-sm text-center font-RedHat md:w-[95%] lg:w-[85%]'>Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</Text>
-            </View>
-            <View className='flex-1 justify-center items-center '>
-              <ButtonSec textPrim="Download" textSec="v1.3" />
-            </View>
-          </View>
-        </ImageBackground>
+        <Footer />
       </ScrollView>
     </SafeAreaView>
   )
