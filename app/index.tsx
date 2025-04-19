@@ -75,39 +75,39 @@ export default function App() {
         {/* Section Two */}
         <View>
           {/* Image Grid */}
-          <View className="flex flex-row justify-center mb-12 gap-4">
-            <View className="w-[255px] aspect-square rounded-lg overflow-hidden flex items-center justify-center">
+          <View className="md:w-[680px] lg:w-full mx-10 flex flex-row justify-center mb-12 gap-4 ">
+            <View className="md:w-[152px] lg:w-[255px] aspect-square rounded-lg overflow-hidden flex items-center justify-center">
               <Image
                 source={require("@/assets/images/desktop/image-woman-in-videocall.jpg")}
-                className="aspect-square transition-transform duration-300 scale-[53%] opacity-80 hover:opacity-[100%]"
+                className="aspect-square transition-transform duration-300 md:scale-[35%] lg:scale-[53%] opacity-80 hover:opacity-[100%]"
               />
             </View>
-            <View className="w-[255px] aspect-square rounded-lg overflow-hidden flex items-center justify-center">
+            <View className="md:w-[152px] lg:w-[255px] aspect-square rounded-lg overflow-hidden flex items-center justify-center">
               <Image
                 source={require("@/assets/images/desktop/image-women-videochatting.jpg")}
-                className="aspect-square transition-transform duration-300 scale-[53%] opacity-80 hover:opacity-[100%]"
+                className="aspect-square transition-transform duration-300 md:scale-[35%] lg:scale-[53%] opacity-80 hover:opacity-[100%]"
               />
             </View>
-            <View className="w-[255px] aspect-square rounded-lg overflow-hidden flex items-center justify-center">
+            <View className="md:w-[152px] lg:w-[255px] aspect-square rounded-lg overflow-hidden flex items-center justify-center">
               <Image
                 source={require("@/assets/images/desktop/image-men-in-meeting.jpg")}
-                className="aspect-square transition-transform duration-300 scale-[53%] opacity-80 hover:opacity-[100%]"
+                className="aspect-square transition-transform duration-300 md:scale-[35%] lg:scale-[53%] opacity-80 hover:opacity-[100%]"
               />
             </View>
-            <View className="w-[255px] aspect-square rounded-lg overflow-hidden flex items-center justify-center">
+            <View className="md:w-[152px] lg:w-[255px] aspect-square rounded-lg overflow-hidden flex items-center justify-center">
               <Image
                 source={require("@/assets/images/desktop/image-man-texting.jpg")}
-                className="aspect-square transition-transform duration-300 scale-[53%] opacity-80 hover:opacity-[100%]"
+                className="aspect-square transition-transform duration-300 md:scale-[35%] lg:scale-[53%] opacity-80 hover:opacity-[100%]"
               />
             </View>
           </View>
           {/* Content Section */}
           <View className="items-center px-4">
             <Text className="text-c_cyan_d font-RedHat font-bold text-sm tracking-widest mb-4">BUILT FOR MODERN USE</Text>
-            <Text className="text-3xl md:text-4xl font-RedHat font-bold text-c_stale_d mb-6 text-center">
-              Smarter meetings, all{"\n"}in one place
+            <Text className="text-3xl md:text-4xl font-RedHat font-bold text-c_stale_d mb-6 text-center md:w-[70%] lg:w-[33%]">
+              Smarter meetings, all in one place
             </Text>
-            <Text className="text-c_stale_n font-RedHat text-sm mb-16 text-center leading-6 w-[38%]">
+            <Text className="text-c_stale_n font-RedHat text-sm mb-16 text-center leading-6 md:w-[78%] lg:w-[38%]">
               Send messages, share files, show your screen, and record your meetings — all in one workspace. Control who can join with invite-only team access, data encryption, and data export.
             </Text>
 
@@ -119,18 +119,17 @@ export default function App() {
         </View>
         {/* Footer */}
         <ImageBackground
-          source={require("@/assets/images/desktop/image-footer.jpg")}
-          className="flex-1 bg-no-repeat bg-cover bg-center flex-row justify-center items-center relative ">
+          source={require("@/assets/images/desktop/image-footer.jpg")}>
           {/* Section indicator number : 02 */}
           <View className="h-12 w-12 rounded-full border border-slate-200 items-center justify-center bg-white absolute -top-6 left-1/2 -translate-x-1/2 z-10">
             <Text className="text-slate-500 font-medium">02</Text>
           </View>
-          <View className='w-full h-[312px] flex-1 flex-row justify-center items-center p-20 bg-c_cyan_d bg-blend-multiply opacity-90'>
+          <View className='w-full h-[312px] flex-1 space-y-8 md:flex-col lg:flex-row justify-center items-center p-20 bg-c_cyan_d bg-blend-multiply opacity-90'>
             <View className='flex-1 flex-row justify-center items-center '>
-              <Text className=' text-white text-4xl font-bold font-RedHat w-[80%]'>Experience more together</Text>
+              <Text className=' text-white text-4xl font-bold font-RedHat lg:w-[80%]'>Experience more together</Text>
             </View>
             <View className='flex-1 justify-center items-center'>
-              <Text className='text-white text-sm font-RedHat w-[85%]'>Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</Text>
+              <Text className='text-white text-sm text-center font-RedHat md:w-[95%] lg:w-[85%]'>Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</Text>
             </View>
             <View className='flex-1 justify-center items-center '>
               <ButtonSec textPrim="Download" textSec="v1.3" />
