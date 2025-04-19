@@ -1,10 +1,9 @@
-import { View, Text, Image, ScrollView, SafeAreaView, useWindowDimensions, ImageBackgroundComponent, ImageBackground } from "react-native"
+import { View, Text, Image, ScrollView, SafeAreaView, useWindowDimensions, ImageBackground } from "react-native"
 
 import { StatusBar } from "expo-status-bar"
 
 import ButtonPri from "./components/ButtonPri"
 import ButtonSec from "./components/ButtonSec"
-import Footer from "./components/Footer"
 
 export default function App() {
 
@@ -18,13 +17,13 @@ export default function App() {
         {/* Logo */}
         <Image
           source={require("@/assets/images/logo.svg")}
-          className="w-20 h-32 m-auto my-20 hover:animate-bounce"
+          className="w-20 h-32 mx-auto mt-16 md:mt-10 md:my-20 hover:animate-bounce"
         />
         {/* Main Content */}
         {/* Profile Images */}
         {/* Desktop */}
         <View className="hidden lg:block">
-          {/* Lest */}
+          {/* Left */}
           <View className="absolute w-fit -left-10 overflow-hidden top-3/4">
             <View className="relative">
               <Image
@@ -44,11 +43,13 @@ export default function App() {
           </View>
         </View>
         {/* Mobile */}
-        <View className="block lg:hidden">
-          <Image
-            source={require("@/assets/images/tablet/image-hero.png")}
-            className="-left-8 overflow-hidden"
-          />
+        <View className="flex justify-center items-center lg:hidden ">
+          <View className="left-0 md:-left-3 overflow-hidden ">
+            <Image
+              source={require("@/assets/images/tablet/image-hero.png")}
+              className=" sm:scale-[50%] md:scale-[100%]"
+            />
+          </View>
         </View>
         {/* Center Content */}
         <View className=" flex-col items-center mx-auto font-RedHat mt-10 lg:mt-0 mb-20">
@@ -59,7 +60,7 @@ export default function App() {
           <Text className="text-gray-500 mb-10 max-w-md mx-auto font-RedHat text-center w-[90%]">
             Meet makes it easy to connect with others strong face-to-face virtually and collaborate across any device.
           </Text>
-          <View className="flex-col sm:flex-row gap-4 items-center">
+          <View className="flex-col md:flex-row gap-4 items-center">
             <ButtonPri textPrim="Download" textSec="v1.3" />
             <ButtonSec textPrim="What is it?" />
           </View>
@@ -75,34 +76,34 @@ export default function App() {
         {/* Section Two */}
         <View>
           {/* Image Grid */}
-          <View className="md:w-[680px] lg:w-full mx-10 flex flex-row justify-center mb-12 gap-4 ">
-            <View className="md:w-[152px] lg:w-[255px] aspect-square rounded-lg overflow-hidden flex items-center justify-center">
+          <View className="sm: w-[311px] md:w-[680px] lg:w-full mx-auto md:mx-10 flex flex-wrap md:flex-nowrap flex-row justify-center mb-12 gap-4 ">
+            <View className="sm:w-[147px] md:w-[152px] lg:w-[255px] aspect-square rounded-lg overflow-hidden flex items-center justify-center">
               <Image
                 source={require("@/assets/images/desktop/image-woman-in-videocall.jpg")}
-                className="aspect-square transition-transform duration-300 md:scale-[35%] lg:scale-[53%] opacity-80 hover:opacity-[100%]"
+                className="aspect-square transition-transform duration-300 sm:scale-[28%] md:scale-[35%] lg:scale-[53%] opacity-80 hover:cursor-pointer hover:opacity-[100%]"
               />
             </View>
-            <View className="md:w-[152px] lg:w-[255px] aspect-square rounded-lg overflow-hidden flex items-center justify-center">
+            <View className="sm:w-[147px] md:w-[152px] lg:w-[255px] aspect-square rounded-lg overflow-hidden flex items-center justify-center">
               <Image
                 source={require("@/assets/images/desktop/image-women-videochatting.jpg")}
-                className="aspect-square transition-transform duration-300 md:scale-[35%] lg:scale-[53%] opacity-80 hover:opacity-[100%]"
+                className="aspect-square transition-transform duration-300 sm:scale-[28%] md:scale-[35%] lg:scale-[53%] opacity-80 hover:cursor-pointer hover:opacity-[100%]"
               />
             </View>
-            <View className="md:w-[152px] lg:w-[255px] aspect-square rounded-lg overflow-hidden flex items-center justify-center">
+            <View className="sm:w-[147px] md:w-[152px] lg:w-[255px] aspect-square rounded-lg overflow-hidden flex items-center justify-center">
               <Image
                 source={require("@/assets/images/desktop/image-men-in-meeting.jpg")}
-                className="aspect-square transition-transform duration-300 md:scale-[35%] lg:scale-[53%] opacity-80 hover:opacity-[100%]"
+                className="aspect-square transition-transform duration-300 sm:scale-[28%] md:scale-[35%] lg:scale-[53%] opacity-80 hover:cursor-pointer hover:opacity-[100%]"
               />
             </View>
-            <View className="md:w-[152px] lg:w-[255px] aspect-square rounded-lg overflow-hidden flex items-center justify-center">
+            <View className="sm:w-[147px] md:w-[152px] lg:w-[255px] aspect-square rounded-lg overflow-hidden flex items-center justify-center">
               <Image
                 source={require("@/assets/images/desktop/image-man-texting.jpg")}
-                className="aspect-square transition-transform duration-300 md:scale-[35%] lg:scale-[53%] opacity-80 hover:opacity-[100%]"
+                className="aspect-square transition-transform duration-300 sm:scale-[28%] md:scale-[35%] lg:scale-[53%] opacity-80 hover:cursor-pointer hover:opacity-[100%]"
               />
             </View>
           </View>
           {/* Content Section */}
-          <View className="items-center px-4">
+          <View className="items-center px-4 ">
             <Text className="text-c_cyan_d font-RedHat font-bold text-sm tracking-widest mb-4">BUILT FOR MODERN USE</Text>
             <Text className="text-3xl md:text-4xl font-RedHat font-bold text-c_stale_d mb-6 text-center md:w-[70%] lg:w-[33%]">
               Smarter meetings, all in one place
