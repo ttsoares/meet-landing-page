@@ -1,4 +1,4 @@
-import { ImageBackground, Text, View, useWindowDimensions } from 'react-native'
+import { ImageBackground, Text, View, useWindowDimensions, StyleSheet } from 'react-native'
 import React from 'react'
 import ButtonSec from './ButtonSec'
 
@@ -7,12 +7,14 @@ export default function Footer() {
   const { width } = useWindowDimensions()
   const imageSrc = width < 768 ?
     require("@/assets/images/mobile/image-footer.jpg")
-    : require("@/assets/images/desktop/image-footer.jpg")
+    : require("@/assets/images/desktop/image-footer.jpg");
 
   return (
     <View>
       <ImageBackground
         source={imageSrc}
+        resizeMode="stretch"
+        style={{ width: width, height: 374 }}
         className='md:h-[320px]'
       >
         {/* Section indicator number : 02 */}
