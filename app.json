@@ -19,7 +19,7 @@
     },
     "web": {
       "bundler": "metro",
-      "output": "single",
+      "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
@@ -36,12 +36,22 @@
       [
         "expo-font",
         {
-          "fonts": ["./assets/fonts/RedHat.ttf"]
+          "fonts": [
+            "./assets/fonts/RedHat.ttf"
+          ]
         }
       ]
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "5d239293-9484-46f9-b4c6-a6494c6984fd"
+      }
     }
   }
 }
