@@ -5,29 +5,29 @@ export default function SectTwo() {
   return (
     <View>
       {/* Image Grid */}
-      <View className="sm: w-[311px] md:w-[680px] lg:w-full mx-auto md:mx-10 flex flex-wrap md:flex-nowrap flex-row justify-center mb-12 gap-4 ">
-        <View className="sm:w-[147px] md:w-[152px] lg:w-[255px] aspect-square rounded-lg overflow-hidden flex items-center justify-center">
+      <View className="w-[311px] md:w-[680px] lg:w-full mx-auto md:mx-10 flex flex-wrap md:flex-nowrap flex-row justify-center mb-12 gap-4 ">
+        <View className="w-[147px] md:w-[152px] lg:w-[255px] aspect-square rounded-lg overflow-hidden flex items-center justify-center">
           <Image
             source={require("@/assets/images/desktop/image-woman-in-videocall.jpg")}
-            className="aspect-square transition-transform duration-300 sm:scale-[28%] md:scale-[35%] lg:scale-[53%] opacity-80 hover:cursor-pointer hover:opacity-[100%]"
+            className="aspect-square transition-transform duration-300 scale-[28%] md:scale-[35%] lg:scale-[53%] opacity-80 hover:cursor-pointer hover:opacity-[100%]"
           />
         </View>
-        <View className="sm:w-[147px] md:w-[152px] lg:w-[255px] aspect-square rounded-lg overflow-hidden flex items-center justify-center">
+        <View className="w-[147px] md:w-[152px] lg:w-[255px] aspect-square rounded-lg overflow-hidden flex items-center justify-center">
           <Image
             source={require("@/assets/images/desktop/image-women-videochatting.jpg")}
-            className="aspect-square transition-transform duration-300 sm:scale-[28%] md:scale-[35%] lg:scale-[53%] opacity-80 hover:cursor-pointer hover:opacity-[100%]"
+            className="aspect-square transition-transform duration-300 scale-[28%] md:scale-[35%] lg:scale-[53%] opacity-80 hover:cursor-pointer hover:opacity-[100%]"
           />
         </View>
-        <View className="sm:w-[147px] md:w-[152px] lg:w-[255px] aspect-square rounded-lg overflow-hidden flex items-center justify-center">
+        <View className="w-[147px] md:w-[152px] lg:w-[255px] aspect-square rounded-lg overflow-hidden flex items-center justify-center">
           <Image
             source={require("@/assets/images/desktop/image-men-in-meeting.jpg")}
-            className="aspect-square transition-transform duration-300 sm:scale-[28%] md:scale-[35%] lg:scale-[53%] opacity-80 hover:cursor-pointer hover:opacity-[100%]"
+            className="aspect-square transition-transform duration-300 scale-[28%] md:scale-[35%] lg:scale-[53%] opacity-80 hover:cursor-pointer hover:opacity-[100%]"
           />
         </View>
-        <View className="sm:w-[147px] md:w-[152px] lg:w-[255px] aspect-square rounded-lg overflow-hidden flex items-center justify-center">
+        <View className="w-[147px] md:w-[152px] lg:w-[255px] aspect-square rounded-lg overflow-hidden flex items-center justify-center">
           <Image
             source={require("@/assets/images/desktop/image-man-texting.jpg")}
-            className="aspect-square transition-transform duration-300 sm:scale-[28%] md:scale-[35%] lg:scale-[53%] opacity-80 hover:cursor-pointer hover:opacity-[100%]"
+            className="aspect-square transition-transform duration-300 scale-[28%] md:scale-[35%] lg:scale-[53%] opacity-80 hover:cursor-pointer hover:opacity-[100%]"
           />
         </View>
       </View>
